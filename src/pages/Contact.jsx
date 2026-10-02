@@ -63,9 +63,18 @@ export default function Contact() {
 
   return (
     <div className="bg-white dark:bg-slate-950 min-h-screen transition-colors duration-300">
-      {/* 1. HERO HEADER */}
-      <section className="py-16 md:py-20 bg-gradient-to-b from-brand-50/80 via-white to-white dark:from-slate-900 dark:via-slate-950 dark:to-slate-950 border-b border-slate-100 dark:border-slate-800 text-center subtle-grid-bg">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 1. HERO HEADER WITH BACKGROUND IMAGE */}
+      <section className="relative py-12 sm:py-16 md:py-20 bg-gradient-to-b from-brand-50/80 via-white to-white dark:from-slate-900 dark:via-slate-950 dark:to-slate-950 border-b border-slate-100 dark:border-slate-800 text-center subtle-grid-bg overflow-hidden">
+        {/* Background image for about page */}
+        <div className="absolute inset-0 opacity-10 dark:opacity-5">
+          <img 
+            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=80"
+            alt="" 
+            className="w-full h-full object-cover"
+            aria-hidden="true"
+          />
+        </div>
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}

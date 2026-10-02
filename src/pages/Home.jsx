@@ -282,21 +282,65 @@ export default function Home({ setActivePage, onSelectProject }) {
         </div>
       </section>
 
-      {/* 2. TRUSTED CLIENT LOGOS */}
-      <section className="py-6 sm:py-7 bg-slate-50 dark:bg-slate-900/60 border-y border-slate-200/60 dark:border-slate-800">
+      {/* 2. TRUSTED CLIENT LOGOS (INFINITE RUNNING TO THE RIGHT) */}
+      <section className="py-5 sm:py-6 bg-slate-50/95 dark:bg-slate-900/80 border-y border-slate-200/70 dark:border-slate-800 relative overflow-hidden backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-5">
-            <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider shrink-0 text-center md:text-left">
-              Dipercaya oleh Perusahaan & BUMN:
-            </span>
-            <div className="flex flex-wrap items-center justify-center md:justify-end gap-4 sm:gap-5 md:gap-8">
-              {CLIENT_LOGOS.map((client, idx) => (
-                <div key={idx} className="flex items-center gap-1.5 sm:gap-2 text-slate-700 dark:text-slate-300 font-bold text-[11px] sm:text-xs md:text-sm tracking-tight hover:text-brand-600 transition-colors">
-                  <Building2 size={14} className="text-brand-500 shrink-0" />
-                  <span>{client}</span>
-                </div>
-              ))}
+          <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-8">
+            
+            {/* Left Label */}
+            <div className="flex items-center gap-2.5 shrink-0 px-3.5 py-2 rounded-xl bg-white dark:bg-slate-800 shadow-soft-sm border border-slate-200/80 dark:border-slate-700/80">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="text-[11px] sm:text-xs font-bold font-heading text-slate-700 dark:text-slate-200 uppercase tracking-wider whitespace-nowrap">
+                Dipercaya oleh Perusahaan & BUMN:
+              </span>
             </div>
+
+            {/* Infinite Marquee Track Running to the Right */}
+            <div className="relative flex-1 w-full overflow-hidden py-1">
+              
+              {/* Left & Right Smooth Gradient Edge Fades */}
+              <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-slate-50 dark:from-[#0b1329] to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-slate-50 dark:from-[#0b1329] to-transparent z-10 pointer-events-none" />
+
+              {/* Marquee Motion Container */}
+              <div className="animate-marquee-right flex items-center gap-4 sm:gap-6 cursor-grab active:cursor-grabbing">
+                {/* 1st Set of Logos */}
+                {CLIENT_LOGOS.map((client, idx) => (
+                  <div 
+                    key={`logo-1-${idx}`} 
+                    className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-sm hover:border-brand-500/70 dark:hover:border-brand-500/70 hover:shadow-soft-md transition-all duration-300 group shrink-0"
+                  >
+                    <div className="h-8 sm:h-9 px-2 py-1 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-750 flex items-center justify-center">
+                      <img 
+                        src={client.logo} 
+                        alt={client.name} 
+                        className="h-full w-auto max-w-[130px] sm:max-w-[150px] object-contain group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                ))}
+
+                {/* 2nd Duplicated Set for Seamless Infinite Loop */}
+                {CLIENT_LOGOS.map((client, idx) => (
+                  <div 
+                    key={`logo-2-${idx}`} 
+                    className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-sm hover:border-brand-500/70 dark:hover:border-brand-500/70 hover:shadow-soft-md transition-all duration-300 group shrink-0"
+                  >
+                    <div className="h-8 sm:h-9 px-2 py-1 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-750 flex items-center justify-center">
+                      <img 
+                        src={client.logo} 
+                        alt={client.name} 
+                        className="h-full w-auto max-w-[130px] sm:max-w-[150px] object-contain group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+
           </div>
         </div>
       </section>
@@ -422,6 +466,10 @@ export default function Home({ setActivePage, onSelectProject }) {
                   <img 
                     src={proj.image} 
                     alt={proj.title}
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80";
+                    }}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
@@ -463,7 +511,7 @@ export default function Home({ setActivePage, onSelectProject }) {
       <section className="py-14 sm:py-20 md:py-28 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="bg-gradient-to-br from-brand-50 via-white to-amber-50/50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-850 rounded-3xl p-5 sm:p-8 md:p-12 border border-brand-200/60 dark:border-slate-800 shadow-soft-lg">
+          <div className="bg-gradient-to-br from-brand-50 via-white to-amber-50/50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950 rounded-3xl p-5 sm:p-8 md:p-12 border border-brand-200/60 dark:border-slate-800 shadow-soft-lg">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-start lg:items-center">
               
               {/* Left Info */}

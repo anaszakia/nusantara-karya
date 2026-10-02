@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 48" fill="none">
+  <!-- Jasa Marga Icon -->
+  <g transform="translate(6, 6)">
+    <circle cx="18" cy="18" r="16" fill="#00805A"/>
+    <path d="M8 26C12 14 24 14 28 26" stroke="#FBBF24" stroke-width="4" stroke-linecap="round"/>
+    <path d="M12 26C15 17 21 17 24 26" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <!-- Text -->
+  <text x="48" y="24" font-family="'Plus Jakarta Sans', 'Outfit', sans-serif" font-weight="900" font-size="14.5" fill="#00805A" letter-spacing="0.5">JASA MARGA</text>
+  <text x="49" y="35" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="7" fill="#64748B" letter-spacing="1.2">INDONESIA HIGHWAY CORP</text>
+</svg>

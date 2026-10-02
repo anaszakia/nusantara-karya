@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" fill="none">
+  <!-- Astra Icon -->
+  <g transform="translate(6, 6)">
+    <circle cx="18" cy="18" r="15" stroke="#004B87" stroke-width="3"/>
+    <path d="M18 7L21 15H29L22.5 19.5L25 28L18 23L11 28L13.5 19.5L7 15H15L18 7Z" fill="#004B87"/>
+  </g>
+  <!-- Text -->
+  <text x="48" y="27" font-family="'Plus Jakarta Sans', 'Outfit', sans-serif" font-weight="900" font-size="19" fill="#004B87" letter-spacing="1.5">ASTRA</text>
+  <text x="49" y="37" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="7" fill="#64748B" letter-spacing="1.2">INTERNATIONAL</text>
+</svg>

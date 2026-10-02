@@ -48,15 +48,15 @@ export default function Navbar({ activePage, setActivePage, darkMode, setDarkMod
         : 'bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 py-4'
     }`}>
       {/* Top micro banner */}
-      <div className="hidden md:block bg-brand-50 dark:bg-slate-850 border-b border-brand-100/60 dark:border-slate-800 py-1.5 text-xs text-slate-600 dark:text-slate-400 -mt-4 mb-3">
+      <div className="hidden md:block bg-brand-50/90 dark:bg-slate-950 border-b border-brand-100/70 dark:border-slate-800/80 py-1.5 text-xs -mt-4 mb-3 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center gap-2 font-medium text-brand-700 dark:text-brand-400">
-            <ShieldCheck size={15} className="text-brand-600 dark:text-brand-400" />
+            <ShieldCheck size={14} className="text-brand-600 dark:text-brand-400 shrink-0" />
             <span>Sertifikasi ISO 9001:2015 & ISO 45001:2018 (K3) Resmi</span>
           </div>
-          <div className="flex items-center gap-6 text-slate-500 dark:text-slate-400">
-            <span>Hotline: <strong className="text-slate-800 dark:text-slate-200 font-semibold">{COMPANY_INFO.phone}</strong></span>
-            <span>Email: <strong className="text-slate-800 dark:text-slate-200 font-semibold">{COMPANY_INFO.email}</strong></span>
+          <div className="flex items-center gap-6 text-slate-600 dark:text-slate-300">
+            <span>Hotline: <strong className="text-slate-900 dark:text-white font-semibold">{COMPANY_INFO.phone}</strong></span>
+            <span>Email: <strong className="text-slate-900 dark:text-white font-semibold">{COMPANY_INFO.email}</strong></span>
           </div>
         </div>
       </div>

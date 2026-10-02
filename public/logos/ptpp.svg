@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" fill="none">
+  <!-- PT PP Icon -->
+  <g transform="translate(6, 6)">
+    <circle cx="18" cy="18" r="16" fill="#003399"/>
+    <path d="M11 11H19C21.5 11 23 12.5 23 15C23 17.5 21.5 19 19 19H14V25H11V11Z" fill="#FBBF24"/>
+    <path d="M19 14H14V16.5H19C19.8 16.5 20.3 16 20.3 15.2C20.3 14.5 19.8 14 19 14Z" fill="#003399"/>
+    <path d="M18 11H26C28.5 11 30 12.5 30 15C30 17.5 28.5 19 26 19H21V25H18V11Z" fill="#FFFFFF"/>
+    <path d="M26 14H21V16.5H26C26.8 16.5 27.3 16 27.3 15.2C27.3 14.5 26.8 14 26 14Z" fill="#003399"/>
+  </g>
+  <!-- Text -->
+  <text x="48" y="27" font-family="'Plus Jakarta Sans', 'Outfit', sans-serif" font-weight="900" font-size="19" fill="#003399" letter-spacing="1">PT PP</text>
+  <text x="49" y="37" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="7" fill="#64748B" letter-spacing="1.2">PEMBANGUNAN PERUMAHAN</text>
+</svg>

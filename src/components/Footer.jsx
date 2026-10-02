@@ -69,7 +69,7 @@ export default function Footer({ setActivePage }) {
               <img 
                 src="/logo-nk.png" 
                 alt="Nusantara Karya Konstruksi" 
-                className="h-16 w-auto object-contain"
+                className="h-45 sm:h-36 w-auto max-w-[240px] object-contain shrink-0"
               />
             </div>
 

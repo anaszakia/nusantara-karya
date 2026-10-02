@@ -83,7 +83,7 @@ export const PROJECTS = [
     client: "PT Nusantara Prima Investama",
     scope: "Design & Build (36 Lantai + 4 Basement)",
     value: "Rp 420 Miliar",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
     description: "Proyek mixed-use high-rise dengan sertifikasi Green Building Platinum. Mengintegrasikan teknologi fasad hemat energi dan sistem peredam gempa mutakhir.",
     highlights: ["Sertifikasi Greenship Platinum", "Teknologi Dual Tuned Mass Damper", "Selesai 2 Bulan Lebih Cepat"]
   },
@@ -97,7 +97,7 @@ export const PROJECTS = [
     client: "Global Logistics Alliance",
     scope: "Struktur Baja & Smart Automated Storage (85,000 m²)",
     value: "Rp 210 Miliar",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
     description: "Pusat distribusi modern dengan spesifikasi lantai superflat tolerance standar FM2 dan sistem insulasi termal canggih untuk efisiensi pendingin udara.",
     highlights: ["Lantai Superflat Laser-Guided", "Struktur Baja Bentang 60m Tanpa Kolom", "Kapasitas 120.000 Pallet"]
   },
@@ -111,7 +111,7 @@ export const PROJECTS = [
     client: "Kementerian PUPR / BUMN Konstruksi",
     scope: "Pekerjaan Struktur Box Girder Beton Pratekan (4.2 Km)",
     value: "Rp 350 Miliar",
-    image: "https://images.unsplash.com/photo-1513828583688-c52571e63919?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=1200&q=80",
     description: "Pembangunan infrastruktur penghubung utama dengan teknologi erection gantry launcher untuk meminimalkan gangguan arus lalu lintas aktif.",
     highlights: ["Teknologi Precast Box Girder Segmental", "Waktu Pelaksanaan Efisien", "Nol Insiden Kerja (Zero LTI)"]
   },
@@ -125,7 +125,7 @@ export const PROJECTS = [
     client: "Oasis Hospitality Group",
     scope: "Konstruksi Resort Mewah, Ballroom & Water Features",
     value: "Rp 185 Miliar",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
     description: "Resort bintang lima dengan konsep arsitektur biophilic berpadu dengan ornamen lokal Bali serta struktur ramah lingkungan tanpa merusak kontur alam.",
     highlights: ["Material Lokal Ramah Lingkungan", "Struktur Terasering Terintegrasi", "Sistem Water Recycling 100%"]
   },
@@ -139,7 +139,7 @@ export const PROJECTS = [
     client: "Apex EV Motors International",
     scope: "Konstruksi Fasilitas Manufaktur & Cleanroom",
     value: "Rp 275 Miliar",
-    image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
     description: "Fasilitas manufaktur berteknologi tinggi dengan standar debu ISO Class 7 Cleanroom dan sistem proteksi kebakaran foam suppression modern.",
     highlights: ["Sertifikasi ISO Class 7 Cleanroom", "Substation Listrik 15 MVA", "Konstruksi Presisi Tinggi"]
   },
@@ -153,7 +153,7 @@ export const PROJECTS = [
     client: "TechVision Nusantara Corp",
     scope: "Arsitektur, Konstruksi & Smart Office Fit-out",
     value: "Rp 145 Miliar",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
     description: "Gedung pintar dengan sistem IoT terpusat, pengatur cahaya otomatis, kaca low-E berinsulasi ganda, dan atap panel surya 250 kWp.",
     highlights: ["Smart Building Automation", "Solar Rooftop 250 kWp", "Interior Akustik Modern"]
   }
@@ -236,7 +236,66 @@ export const VALUES = [
 ];
 
 export const CLIENT_LOGOS = [
-  "PT Wijaya Makmur", "Global Infrastructure Corp", "Adhi Jaya Land", "Sinar Mandiri Properti", "Indo Logistic Hub", "Apex Automotive"
+  { 
+    name: "Wijaya Karya (WIKA)", 
+    category: "BUMN Konstruksi",
+    logo: "/logos/wika.svg"
+  },
+  { 
+    name: "Waskita Karya", 
+    category: "BUMN Infrastruktur",
+    logo: "/logos/waskita.svg"
+  },
+  { 
+    name: "Adhi Karya", 
+    category: "BUMN Karya & EPC",
+    logo: "/logos/adhi.svg"
+  },
+  { 
+    name: "PT PP (Persero)", 
+    category: "Pembangunan Perumahan",
+    logo: "/logos/ptpp.svg"
+  },
+  { 
+    name: "Hutama Karya", 
+    category: "Jalan Tol & Trans Sumatera",
+    logo: "/logos/hutamakarya.svg"
+  },
+  { 
+    name: "Jasa Marga", 
+    category: "Pengelola Jalan Tol",
+    logo: "/logos/jasamarga.svg"
+  },
+  { 
+    name: "Semen Indonesia (SIG)", 
+    category: "Material & Industri Semen",
+    logo: "/logos/sig.svg"
+  },
+  { 
+    name: "Pertamina", 
+    category: "Energi & Fasilitas Industri",
+    logo: "/logos/pertamina.svg"
+  },
+  { 
+    name: "PLN (Persero)", 
+    category: "Infrastruktur Ketenagalistrikan",
+    logo: "/logos/pln.svg"
+  },
+  { 
+    name: "Astra International", 
+    category: "Manufaktur & Kawasan Industri",
+    logo: "/logos/astra.svg"
+  },
+  { 
+    name: "Telkom Indonesia", 
+    category: "Data Center & Telekomunikasi",
+    logo: "/logos/telkom.svg"
+  },
+  { 
+    name: "Ciputra Development", 
+    category: "Komersial & Residensial",
+    logo: "/logos/ciputra.svg"
+  }
 ];
 
 export const TEAM_MEMBERS = [

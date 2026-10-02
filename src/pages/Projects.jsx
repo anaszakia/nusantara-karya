@@ -48,20 +48,30 @@ export default function Projects({ selectedProject, setSelectedProject }) {
   return (
     <div className="bg-white dark:bg-slate-950 min-h-screen transition-colors duration-300">
       {/* 1. HERO HEADER */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-brand-50/80 via-white to-white dark:from-slate-900 dark:via-slate-950 dark:to-slate-950 border-b border-slate-100 dark:border-slate-800 text-center subtle-grid-bg">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-12 sm:py-16 md:py-20 bg-gradient-to-b from-brand-50/80 via-white to-white dark:from-slate-900 dark:via-slate-950 dark:to-slate-950 border-b border-slate-100 dark:border-slate-800 text-center subtle-grid-bg overflow-hidden">
+        {/* Background image identical to about page */}
+        <div className="absolute inset-0 opacity-10 dark:opacity-5">
+          <img 
+            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=80"
+            alt="" 
+            className="w-full h-full object-cover"
+            aria-hidden="true"
+          />
+        </div>
+
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-brand-100 dark:bg-brand-950/60 text-brand-700 dark:text-brand-400 font-bold text-xs uppercase tracking-wider mb-4">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-brand-100/90 dark:bg-brand-950/80 backdrop-blur-md text-brand-700 dark:text-brand-400 border border-brand-200/80 dark:border-brand-800/80 font-bold text-xs uppercase tracking-wider mb-4 shadow-sm">
               Portofolio Proyek
             </span>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-heading text-slate-900 dark:text-white tracking-tight mb-3 sm:mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-heading text-slate-900 dark:text-white tracking-tight leading-tight mb-3 sm:mb-4">
               Mahakarya Konstruksi & <span className="gradient-orange-text">Rekam Jejak Nyata</span>
             </h1>
-            <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm md:text-base max-w-2xl mx-auto">
+            <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
               Jelajahi portofolio konstruksi gedung tinggi, kawasan industri, dan infrastruktur strategis yang kami selesaikan dengan kepatuhan mutu tertinggi.
             </p>
           </motion.div>
@@ -141,6 +151,10 @@ export default function Projects({ selectedProject, setSelectedProject }) {
                     <img 
                       src={proj.image} 
                       alt={proj.title}
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80";
+                      }}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                     />
@@ -214,6 +228,10 @@ export default function Projects({ selectedProject, setSelectedProject }) {
                 <img 
                   src={modalProject.image} 
                   alt={modalProject.title}
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80";
+                  }}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4 sm:p-6 md:p-8 text-white">

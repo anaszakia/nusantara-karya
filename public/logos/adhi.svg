@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" fill="none">
+  <!-- Adhi Icon -->
+  <g transform="translate(6, 6)">
+    <polygon points="18,2 34,10 34,26 18,34 2,26 2,10" fill="#E30613"/>
+    <polygon points="18,7 29,13 29,23 18,29 7,23 7,13" fill="#FFFFFF"/>
+    <polygon points="18,12 24,15 24,21 18,24 12,21 12,15" fill="#E30613"/>
+  </g>
+  <!-- Text -->
+  <text x="48" y="27" font-family="'Plus Jakarta Sans', 'Outfit', sans-serif" font-weight="900" font-size="19" fill="#E30613" letter-spacing="1">ADHI</text>
+  <text x="49" y="37" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="7" fill="#64748B" letter-spacing="1.5">KARYA (PERSERO)</text>
+</svg>

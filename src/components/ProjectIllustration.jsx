@@ -76,7 +76,7 @@ export function ProjectIllustration({ type = 'building', className = '' }) {
 
 export function HeroBlueprintVisual() {
   return (
-    <div className="relative w-full h-full min-h-[380px] sm:min-h-[440px] bg-gradient-to-br from-slate-900 via-slate-850 to-slate-950 p-7 sm:p-9 flex flex-col justify-between overflow-hidden text-white">
+    <div className="relative w-full h-full min-h-[380px] sm:min-h-[440px] bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 p-7 sm:p-9 flex flex-col justify-between overflow-hidden text-white">
       {/* Grid pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:32px_32px]" />
       

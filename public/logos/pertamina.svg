@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 48" fill="none">
+  <!-- Pertamina Official 3-Parallelogram Icon -->
+  <g transform="translate(6, 7)">
+    <!-- Blue top-left shape -->
+    <path d="M4 14.5C4 9.5 8 5.5 13 5.5H19L15 15.5H5.5C4.6 15.5 4 15.1 4 14.5Z" fill="#0066B3"/>
+    <!-- Green top-right shape -->
+    <path d="M21 5.5H27C32 5.5 36 9.5 36 14.5C36 15.1 35.4 15.5 34.5 15.5H25L21 5.5Z" fill="#78BE20"/>
+    <!-- Red bottom shape -->
+    <path d="M8 20.5H32L28 30.5C27 33 24 34.5 20 34.5C16 34.5 13 33 12 30.5L8 20.5Z" fill="#ED1C24"/>
+  </g>
+  <!-- Text -->
+  <text x="50" y="25" font-family="'Plus Jakarta Sans', 'Outfit', sans-serif" font-weight="900" font-size="14.5" fill="#0066B3" letter-spacing="1">PERTAMINA</text>
+  <text x="51" y="35" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="7" fill="#ED1C24" letter-spacing="1.2">PERSERO</text>
+</svg>

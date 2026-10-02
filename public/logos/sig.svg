@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" fill="none">
+  <!-- SIG Icon -->
+  <g transform="translate(6, 6)">
+    <path d="M18 4L30 11V25L18 32L6 25V11L18 4Z" fill="#E30613"/>
+    <path d="M18 9L26 14V22L18 27L10 22V14L18 9Z" fill="#FFFFFF"/>
+    <path d="M18 14L22 16.5V20.5L18 23L14 20.5V16.5L18 14Z" fill="#003399"/>
+  </g>
+  <!-- Text -->
+  <text x="48" y="27" font-family="'Plus Jakarta Sans', 'Outfit', sans-serif" font-weight="900" font-size="20" fill="#E30613" letter-spacing="1">SIG</text>
+  <text x="49" y="37" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="7" fill="#64748B" letter-spacing="1.2">SEMEN INDONESIA</text>
+</svg>

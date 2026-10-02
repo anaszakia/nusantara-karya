@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 48" fill="none">
+  <!-- Telkom Icon -->
+  <g transform="translate(6, 6)">
+    <circle cx="18" cy="18" r="15" fill="#E30613"/>
+    <path d="M12 18C12 14.7 14.7 12 18 12C21.3 12 24 14.7 24 18" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="18" cy="23" r="2.5" fill="#FFFFFF"/>
+  </g>
+  <!-- Text -->
+  <text x="48" y="24" font-family="'Plus Jakarta Sans', 'Outfit', sans-serif" font-weight="900" font-size="14.5" fill="#E30613" letter-spacing="0.5">TELKOM</text>
+  <text x="49" y="35" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="7.5" fill="#64748B" letter-spacing="1">INDONESIA</text>
+</svg>

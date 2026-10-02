@@ -278,7 +278,7 @@ export default function About({ setActivePage }) {
                     loading="lazy"
                     onError={(e) => {
                       e.target.style.display = 'none';
-                      e.target.parentElement.classList.add('bg-gradient-to-br', 'from-brand-500/15', 'via-orange-500/10', 'to-amber-500/20', 'dark:from-slate-800', 'dark:to-slate-850', 'flex', 'items-center', 'justify-center');
+                      e.target.parentElement.classList.add('bg-gradient-to-br', 'from-brand-500/15', 'via-orange-500/10', 'to-amber-500/20', 'dark:from-slate-800', 'dark:to-slate-900', 'flex', 'items-center', 'justify-center');
                       const fallback = document.createElement('div');
                       fallback.className = 'w-20 h-20 rounded-full bg-gradient-to-br from-brand-500 to-amber-600 text-white text-2xl font-extrabold flex items-center justify-center shadow-orange-sm';
                       fallback.textContent = member.initials;
