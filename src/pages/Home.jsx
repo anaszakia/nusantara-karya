@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { 
   Building2, 
   ArrowRight, 
@@ -26,6 +26,21 @@ export default function Home({ setActivePage, onSelectProject }) {
   const [areaSize, setAreaSize] = useState(1000);
   const [floors, setFloors] = useState(3);
   const [qualityLevel, setQualityLevel] = useState('standar');
+
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Fallback if browser requires interaction
+        });
+      }
+    }
+  }, []);
 
   const calculateEstimate = () => {
     let baseRate = 4500000;
@@ -80,36 +95,29 @@ export default function Home({ setActivePage, onSelectProject }) {
         
         {/* Background Video Element */}
         <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
-          {/* Poster image fallback visible while video loads */}
-          <img 
-            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80"
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover"
-            aria-hidden="true"
-          />
           <video
+            ref={videoRef}
             autoPlay
             loop
             muted
             playsInline
+            preload="auto"
             poster="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80"
             className="absolute inset-0 w-full h-full object-cover"
             style={{ zIndex: 1 }}
           >
-            <source 
-              src={COMPANY_INFO.heroVideo} 
-              type="video/mp4" 
-            />
+            <source src="/hero-construction.webm" type="video/webm" />
+            <source src="/hero-construction.mp4" type="video/mp4" />
           </video>
 
           {/* Premium Multi-layer Overlay for Light & Dark Mode Readability */}
           {/* Light Mode Overlay: Soft Clean White to Orange Ambient */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/90 to-white/60 dark:hidden" style={{ zIndex: 2 }} />
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-white/40 dark:hidden" style={{ zIndex: 2 }} />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/50 dark:hidden" style={{ zIndex: 2 }} />
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-white/30 dark:hidden" style={{ zIndex: 2 }} />
 
           {/* Dark Mode Overlay: Cinematic Slate/Black to Brand Accent */}
-          <div className="hidden dark:block absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/90 to-slate-950/70" style={{ zIndex: 2 }} />
-          <div className="hidden dark:block absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-slate-950/60" style={{ zIndex: 2 }} />
+          <div className="hidden dark:block absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/80 to-slate-950/50" style={{ zIndex: 2 }} />
+          <div className="hidden dark:block absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-slate-950/40" style={{ zIndex: 2 }} />
           
           {/* Architectural Subtle Grid Effect */}
           <div className="absolute inset-0 subtle-grid-bg opacity-30 pointer-events-none" style={{ zIndex: 3 }} />

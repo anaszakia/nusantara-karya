@@ -10,8 +10,9 @@ export const COMPANY_INFO = {
   rfqEmail: "proyek@nusantarakarya.co.id",
   address: "Graha Mandiri Tower, Lt. 18, Jl. Jend. Sudirman Kav. 54-55, Jakarta Selatan 12190, Indonesia",
   workingHours: "Senin - Jumat: 08:00 - 17:00 WIB | Sabtu: 08:30 - 13:00 WIB",
-  // Hero video - Pexels free construction video (direct mp4 link)
-  heroVideo: "https://videos.pexels.com/video-files/2491284/2491284-hd_1920_1080_24fps.mp4",
+  // Hero video - High-definition construction project footage
+  heroVideo: "/hero-construction.webm",
+  heroVideoFallback: "/hero-construction.mp4",
   stats: [
     { label: "Proyek Selesai", value: "250+", suffix: "Proyek" },
     { label: "Tahun Pengalaman", value: "14+", suffix: "Tahun" },
