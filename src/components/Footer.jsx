@@ -31,13 +31,13 @@ export default function Footer({ setActivePage }) {
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="max-w-2xl text-center lg:text-left">
               <span className="inline-block px-3.5 py-1 rounded-full bg-white/20 text-white font-bold text-xs uppercase tracking-wider mb-3">
-                Siap Membangun Bersama?
+                Mulai Kolaborasi
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-heading text-white tracking-tight mb-3">
-                Wujudkan Proyek Konstruksi Anda dengan Presisi & Mutu Tertinggi
+                Siap Mewujudkan Konstruksi Berkualitas Tinggi?
               </h2>
               <p className="text-white/90 text-sm sm:text-base leading-relaxed">
-                Diskusikan rancangan anggaran biaya (RAB), jadwal pengerjaan, dan konsultasi teknis gratis bersama tim insinyur kami.
+                Konsultasikan kebutuhan proyek gedung komersial, pabrik, gudang, maupun infrastruktur Anda bersama tim engineering ahli kami.
               </p>
             </div>
 
@@ -48,14 +48,14 @@ export default function Footer({ setActivePage }) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-slate-900 hover:bg-black text-white font-bold text-sm transition-all duration-300 shadow-md transform hover:-translate-y-0.5"
               >
-                <span>Minta Penawaran (RFQ)</span>
+                <span>Minta Penawaran RAB</span>
                 <ArrowRight size={16} />
               </a>
               <button
                 onClick={() => handleNav('contact')}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/15 hover:bg-white/25 text-white font-bold text-sm backdrop-blur-md transition-all duration-300"
               >
-                <span>Hubungi Kantor</span>
+                <span>Hubungi Kantor Kami</span>
               </button>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function Footer({ setActivePage }) {
             </div>
 
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
-              Perusahaan jasa konstruksi dan rekayasa teknik terkemuka di Indonesia yang mengutamakan standar K3 internasional, kepatuhan teknis, dan keberlanjutan.
+              Mitra konstruksi dan rekayasa teknik terpercaya di Indonesia dengan komitmen mutu presisi, standar K3 ketat, dan ketepatan waktu proyek.
             </p>
 
             <div className="flex flex-wrap gap-2.5 mt-2">
@@ -92,28 +92,25 @@ export default function Footer({ setActivePage }) {
           {/* Col 3: Navigation */}
           <div>
             <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-4 border-l-2 border-brand-500 pl-2.5">
-              Navigasi
+              Navigasi Cepat
             </h4>
             <ul className="space-y-2.5 text-sm">
-              {['home', 'about', 'projects', 'contact'].map((p) => {
-                const labels = {
-                  home: 'Beranda Utama',
-                  about: 'Tentang Kami',
-                  projects: 'Portofolio Project',
-                  contact: 'Kontak & RFQ'
-                };
-                return (
-                  <li key={p}>
-                    <button
-                      onClick={() => handleNav(p)}
-                      className="flex items-center gap-2 text-slate-400 hover:text-brand-400 transition-colors"
-                    >
-                      <ChevronRight size={14} className="text-slate-600" />
-                      <span>{labels[p]}</span>
-                    </button>
-                  </li>
-                );
-              })}
+              {[
+                { id: 'home', label: 'Beranda' },
+                { id: 'about', label: 'Tentang Kami' },
+                { id: 'projects', label: 'Portofolio Project' },
+                { id: 'contact', label: 'Hubungi Kami' }
+              ].map((item) => (
+                <li key={item.id}>
+                  <button
+                    onClick={() => handleNav(item.id)}
+                    className="flex items-center gap-2 text-slate-400 hover:text-brand-400 transition-colors"
+                  >
+                    <ChevronRight size={14} className="text-slate-600" />
+                    <span>{item.label}</span>
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -165,11 +162,11 @@ export default function Footer({ setActivePage }) {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© {currentYear} {COMPANY_INFO.name}. Seluruh Hak Cipta Dilindungi.</p>
+          <p>© {currentYear} {COMPANY_INFO.name}. Hak Cipta Dilindungi.</p>
           <div className="flex gap-6">
             <span className="hover:text-slate-400 cursor-pointer">Kebijakan Privasi</span>
-            <span className="hover:text-slate-400 cursor-pointer">Syarat Ketentuan</span>
-            <span className="hover:text-slate-400 cursor-pointer">Standar K3 Konstruksi</span>
+            <span className="hover:text-slate-400 cursor-pointer">Syarat & Ketentuan</span>
+            <span className="hover:text-slate-400 cursor-pointer">Komitmen K3</span>
           </div>
         </div>
       </div>

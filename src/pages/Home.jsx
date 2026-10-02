@@ -75,7 +75,7 @@ export default function Home({ setActivePage, onSelectProject }) {
     visible: (custom = 0) => ({
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, delay: custom * 0.1, ease: 'easeOut' }
+      transition: { duration: 0.6, delay: custom * 0.12, ease: "easeOut" }
     })
   };
 
@@ -204,7 +204,7 @@ export default function Home({ setActivePage, onSelectProject }) {
                 >
                   <img 
                     src="/construction-workers.jpg" 
-                    alt="Ilustrasi pekerja konstruksi" 
+                    alt="Pekerja konstruksi" 
                     className="w-full h-auto max-w-md mx-auto drop-shadow-2xl rounded-2xl"
                   />
                 </motion.div>
@@ -261,8 +261,8 @@ export default function Home({ setActivePage, onSelectProject }) {
                   transition={{ duration: 0.5, delay: 1.2 }}
                 >
                   <motion.div
-                    animate={{ y: [0, -4, 0] }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+                    animate={{ y: [0, -7, 0] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                   >
                     <div className="flex items-center gap-2">
                       <div className="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center">

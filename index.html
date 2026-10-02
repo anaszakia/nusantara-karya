@@ -15,6 +15,25 @@
     <title>Nusantara Karya Konstruksi | Solusi Konstruksi & Infrastruktur Modern</title>
   </head>
   <body>
+    <!-- Google Translate Script -->
+    <div id="google_translate_element" style="display:none"></div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        try {
+          if (window.google && window.google.translate && window.google.translate.TranslateElement) {
+            new window.google.translate.TranslateElement({
+              pageLanguage: 'id',
+              includedLanguages: 'id,en',
+              autoDisplay: false
+            }, 'google_translate_element');
+          }
+        } catch (e) {
+          console.warn('Google Translate initialization skipped:', e);
+        }
+      }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

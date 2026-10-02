@@ -8,14 +8,17 @@ import {
   HardHat, 
   ShieldCheck,
   Sun,
-  Moon
+  Moon,
+  Globe
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { COMPANY_INFO } from '../data/mockData';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Navbar({ activePage, setActivePage, darkMode, setDarkMode }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { language, changeLanguage } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -99,16 +102,42 @@ export default function Navbar({ activePage, setActivePage, darkMode, setDarkMod
             })}
           </nav>
 
-          {/* Right Action: Dark Mode Toggle & WhatsApp CTA */}
-          <div className="flex items-center gap-2.5 sm:gap-3">
+          {/* Right Action: Language Switcher, Dark Mode Toggle & WhatsApp CTA */}
+          <div className="flex items-center gap-2 sm:gap-2.5">
+            {/* Language Switcher Pill (Triggers Google Translate Entire Page) */}
+            <div className="flex items-center bg-slate-100 dark:bg-slate-800 p-0.5 sm:p-1 rounded-full border border-slate-200 dark:border-slate-700">
+              <button
+                onClick={() => changeLanguage('id')}
+                className={`flex items-center gap-1 px-2.5 sm:px-3 py-1 rounded-full text-xs font-bold transition-all ${
+                  language === 'id'
+                    ? 'bg-brand-500 text-white shadow-sm'
+                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                }`}
+                title="Terjemahkan seluruh halaman ke Bahasa Indonesia"
+              >
+                <span>🇮🇩 ID</span>
+              </button>
+              <button
+                onClick={() => changeLanguage('en')}
+                className={`flex items-center gap-1 px-2.5 sm:px-3 py-1 rounded-full text-xs font-bold transition-all ${
+                  language === 'en'
+                    ? 'bg-brand-500 text-white shadow-sm'
+                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                }`}
+                title="Translate entire page to English with Google Translate"
+              >
+                <span>🇬🇧 EN</span>
+              </button>
+            </div>
+
             {/* Dark Mode Toggle Button */}
             <button
               onClick={() => setDarkMode(!darkMode)}
               className="p-2 sm:p-2.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400 hover:bg-brand-50 dark:hover:bg-slate-700 transition-colors border border-slate-200 dark:border-slate-700"
               aria-label="Toggle Theme Mode"
-              title={darkMode ? "Beralih ke Light Mode" : "Beralih ke Dark Mode"}
+              title={darkMode ? "Light Mode" : "Dark Mode"}
             >
-              {darkMode ? <Sun size={18} /> : <Moon size={18} />}
+              {darkMode ? <Sun size={17} /> : <Moon size={17} />}
             </button>
 
             {/* Desktop CTA */}
@@ -116,9 +145,9 @@ export default function Navbar({ activePage, setActivePage, darkMode, setDarkMod
               href={COMPANY_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-2 px-4 lg:px-5 py-2.5 rounded-full bg-brand-500 hover:bg-brand-600 text-white font-semibold text-xs lg:text-sm shadow-orange-sm hover:shadow-orange-glow transition-all duration-300 transform hover:-translate-y-0.5"
+              className="hidden lg:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500 hover:bg-brand-600 text-white font-semibold text-xs shadow-orange-sm hover:shadow-orange-glow transition-all duration-300 transform hover:-translate-y-0.5"
             >
-              <PhoneCall size={15} />
+              <PhoneCall size={14} />
               <span>Konsultasi Proyek</span>
             </a>
 
@@ -129,7 +158,7 @@ export default function Navbar({ activePage, setActivePage, darkMode, setDarkMod
                 className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-brand-50 transition-colors"
                 aria-label="Toggle Navigation"
               >
-                {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+                {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
               </button>
             </div>
           </div>
@@ -147,6 +176,29 @@ export default function Navbar({ activePage, setActivePage, darkMode, setDarkMod
             className="md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 overflow-hidden shadow-soft-lg"
           >
             <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col gap-2">
+              {/* Mobile Language & Mode bar */}
+              <div className="flex items-center justify-between pb-3 mb-2 border-b border-slate-100 dark:border-slate-800">
+                <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">Bahasa / Language:</span>
+                <div className="flex items-center bg-slate-100 dark:bg-slate-800 p-1 rounded-full">
+                  <button
+                    onClick={() => changeLanguage('id')}
+                    className={`px-3 py-1 rounded-full text-xs font-bold transition-all ${
+                      language === 'id' ? 'bg-brand-500 text-white' : 'text-slate-600 dark:text-slate-400'
+                    }`}
+                  >
+                    🇮🇩 ID
+                  </button>
+                  <button
+                    onClick={() => changeLanguage('en')}
+                    className={`px-3 py-1 rounded-full text-xs font-bold transition-all ${
+                      language === 'en' ? 'bg-brand-500 text-white' : 'text-slate-600 dark:text-slate-400'
+                    }`}
+                  >
+                    🇬🇧 EN
+                  </button>
+                </div>
+              </div>
+
               {navItems.map((item) => (
                 <button
                   key={item.id}
